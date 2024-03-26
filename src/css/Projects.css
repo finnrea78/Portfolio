@@ -1,0 +1,15 @@
+.mainContainer {
+    background: #d3d3d3 ;
+    height: 50%;
+  }
+
+.cardContainer {
+    max-width: 800;
+    margin: 1rem auto;
+    padding: 2rem;
+  }
+
+.card-postion {
+    display: flex;;
+    padding: 1.5rem;
+  }

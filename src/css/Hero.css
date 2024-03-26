@@ -1,0 +1,70 @@
+.text {
+    /* display: flex; */
+    justify-content: center; 
+    align-items: center;
+    margin: auto;
+    padding-top: 1%;
+    font: 200 2em/2em "Lucida Console", "Courier New", monospace;
+}
+
+.easter_egg:hover span {
+    display: none
+  }
+  
+.easter_egg:hover:before {
+    content: "General Kenobi!"
+  }
+
+.inner-container {
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+
+
+.image-align {
+    display: flex;
+    /* justify-content: center; */
+    position: relative;
+    margin: 50px auto ;
+
+}
+
+.wrapper {
+
+    display: block;
+    position: relative;
+    width: 100%;
+    border-radius: var(--border-radius);
+    background-color: var(--green);
+}
+
+.wrapper:hover {
+    background-color: transparent;
+    outline: 0;
+}
+
+.wrapper:focus {
+    background-color: transparent;
+    outline: 0;
+}
+
+.wrapper:hover:after {
+    top: 15px;
+    left: 15px;
+}
+
+.wrapper:focus:after {
+    top: 15px;
+    left: 15px;
+}
+
+
+.img {
+    position: relative;
+    border-radius: var(--border-radius);
+    mix-blend-mode: multiply;
+    filter: contrast(1);
+    transition: var(--transition);
+    border-radius: 10%;
+}

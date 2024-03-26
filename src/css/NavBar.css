@@ -1,0 +1,19 @@
+.appbar {
+    padding-bottom: 3%;
+}
+
+.logo {
+    width: 50px;
+    margin: 0 auto;
+    display: block;
+    padding: 10px;
+
+}
+
+.invert{
+    filter: invert(100%);
+}
+
+.font {
+    font: 200 2em/2em "Lucida Console", "Courier New", monospace;
+}
