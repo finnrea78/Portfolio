@@ -13,33 +13,42 @@ const About = () => {
   };
 
   return (
-    <Grid container spacing={2} sx={{ pb: 0 }} className="background">
-      <Grid item sm={12} sx={{ mt: 3, mb: 3 }}>
+    <Grid container spacing={2} className="background" sx={{pb:3}}>
+      <Grid item sm={12} sx={{ mt: 2, mb: 1 }}>
         <Typography variant="h3" component="h1" sx={titleStyle}>
           About
         </Typography>
       </Grid>
 
-      <Grid item xs={6} >
-            <Box
-                component={"img"}
-                src={HealthTech}
-                sx={{
-                   
-                    alignItems: "center",
-                    justifyContent: "center",
-                }}
-                className="content"
-            />
-        </Grid>
-      <Grid item xs={6}>
+      <Grid
+        item
+        xs={12}
+        sm={12}
+        md={6}
+        lg={6}
+        display={"flex"}
+        alignItems="center"
+        justifyContent="center"
+      >
+        <Box
+          component={"img"}
+          src={HealthTech}
+          sx={{
+            p: 5,
+            ml:2,
+            maxHeight: { xs: "100%", md: "100%" },
+            maxWidth: { xs: "100%", md: "100%" },
+          }}
+          className="content"
+        />
+      </Grid>
+      <Grid item xs={12} sm={12} md={6} lg={6}>
         <Box sx={{ flexGrow: 1, pt: 3, pb: 0 }}>
           <Box
             sx={{
               display: "flex",
               alignItems: "center",
-              pb: 10,
-              flexDirection: "column",
+              p: 1,
               whiteSpace: "pre-wrap",
             }}
           >
@@ -47,7 +56,7 @@ const About = () => {
               multiline
               variant="body1"
               component="p"
-              className="text-block"
+              sx={{ fontSize: "1em", textAlign: "justify", mr: 1}}
             >
               Hi there! I'm Finn, a data scientist and software engineer. I'm
               passionate about open source. I am particularly intrested in the
@@ -59,8 +68,9 @@ const About = () => {
               city. I graduate with a bachelors in computer science from
               Newcastle University in 2023. I am currently pursuing a masters in
               data science at Exeter University, while working full time at
-              Roche.{"\n\n"}Outside of work I enjoy playing the guitar having played
-              in multiple bands, playing frisbee (Newcastle pies) and squash. 
+              Roche.{"\n\n"}Outside of work I enjoy playing the guitar having
+              played in multiple bands, playing frisbee (Newcastle pies) and
+              squash.
             </Typography>
           </Box>
         </Box>

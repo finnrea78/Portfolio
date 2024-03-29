@@ -12,13 +12,14 @@ const Hero = () => {
   return (
     <Box
       component="div"
-      sx={{ flexGrow: 1, pt: 3, pb: 0, backgroundColor: "#d3d3d3" }}
+      sx={{ flexGrow: 1, backgroundColor: "#d3d3d3" }}
     >
       <Grid container spacing={2}>
         <Grid
           item
           display={"flex"}
           xs={12}
+          sm={10}
           md={6}
           xl={6}
           sx={{
@@ -29,7 +30,7 @@ const Hero = () => {
           alignItems="center"
           justifyContent="center"
         >
-          <Box className="text">
+          <Box className="text" sx={{pl: 1}}>
             {/* Add on hover general kenobi */}
 
             <h3 className="easter_egg">
@@ -69,9 +70,9 @@ const Hero = () => {
         <Grid
           item
           xs={12}
+          sm={12}
           md={6}
           xl={6}
-          spacing={0}
           display={"flex"}
           alignItems="flex-end"
           justifyContent="flex-end"

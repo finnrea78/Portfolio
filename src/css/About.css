@@ -1,19 +1,8 @@
 .background {
     background-color: darkgray;
-    font-family: "Lucida Console", "Courier New", monospace;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-    height: auto;
 }
 
-.text-block {
-    margin: 0px;
-    white-space: "pre-wrap";
-    font-family: "Lucida Console", "Courier New", monospace;
-}
 .content {
-    background: white;
-    margin-left:10%;
-    padding: 5%;
-    border-radius: 10%;
+    background: white; 
+    border-radius: 20%;
 }

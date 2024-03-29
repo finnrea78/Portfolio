@@ -50,7 +50,7 @@ const Projects = () => {
     <Box component="div" className="mainContainer">
       <Typography variant="h3" component="h1" sx={titleStyle}>
         Personal favourite projects
-      </Typography>
+    </Typography>
       <Grid container justify="center">
         {projects.map((project, i) => (
           <Grid item xs={12} sm={12} md={4} key={i} className="card-postion">
