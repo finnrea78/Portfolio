@@ -6,6 +6,7 @@ import Box from "@mui/material/Box";
 import Projects from "./components/Projects";
 import { Helmet } from "react-helmet";
 import About from "./components/About";
+import Contact from "./components/Contact";
 import { createTheme, ThemeProvider } from "@mui/material";
 import "./css/App.css";
 
@@ -32,6 +33,7 @@ function App() {
         <Hero />
         <About />
         <Projects/>
+        <Contact />
       </Box>
     </ThemeProvider>
   );

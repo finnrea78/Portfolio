@@ -31,33 +31,29 @@ const projects = [
   },
   {
     name: "Frogger Learning Game",
-    description: `A game built for learning times tables using windows forms. The game
-    was built using C# and mySQL and allowed for the teacher to interact with the class
-    through windows forms.`,
+    description: `A game built for learning times tables using an XNA frogger game. The game
+    was built using C# and allowed for teacher interaction using windows forms and mySQL.`,
     image: Frog,
-    link: "https://github.com/finnrea78/FroggerWindowsForms"
+    link: "https://github.com/finnrea78/FroggerWindowsForms",
   },
-
 ];
 
 const Projects = () => {
+  const titleStyle = {
+    fontFamily: "Lucida Console",
+    fontSize: "4rem",
+    textAlign: "center",
+    paddingTop: "2rem",
+  };
 
-    const titleStyle = {
-        fontFamily: "Lucida Console",
-        fontSize: "4rem",
-        textAlign: "center",
-        paddingTop: "2rem",
-      };
-  
-      
   return (
     <Box component="div" className="mainContainer">
       <Typography variant="h3" component="h1" sx={titleStyle}>
         Personal favourite projects
-    </Typography>
+      </Typography>
       <Grid container justify="center">
         {projects.map((project, i) => (
-          <Grid item xs={12} sm={8} md={4} key={i} className="card-postion">
+          <Grid item xs={12} sm={12} md={4} key={i} className="card-postion">
             <Card className="cardContainer">
               <CardActionArea>
                 <CardMedia
