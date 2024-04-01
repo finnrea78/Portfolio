@@ -7,48 +7,40 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
-import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
 import Main_logo from "C:/Portfolio/src/images/Logo.png";
 import CssBaseline from "@mui/material/CssBaseline";
-import useScrollTrigger from "@mui/material/useScrollTrigger";
+import { Link } from "react-scroll";
+import { useState } from "react";
 
 import "../css/NavBar.css";
 
 const pages = ["About", "Projects", "Contact"];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
-const NavBar = () => {
+const NavBar = ({ handleScroll }) => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
   };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
+  const path = window.location.pathname;
 
 
   return (
     <React.Fragment>
       <CssBaseline />
-      <AppBar position="sticky" sx={{ bgcolor: "gray"}} className="font">
+      <AppBar position="sticky" sx={{ bgcolor: "gray" }} className="font">
         <Container maxWidth="xl">
           {/* Icon logo */}
           <Toolbar disableGutters>
             <Box
+              onClick={() => handleScroll("")}
               component={"img"}
               sx={{
                 height: 40,
@@ -63,13 +55,14 @@ const NavBar = () => {
               variant="h5"
               noWrap
               component="a"
-              href=""
+              onClick={() => handleScroll("Hero")}
               sx={{
                 mr: 2,
                 display: { xs: "none", md: "flex" },
                 fontFamily: "monospace",
-                fontWeight: 700,
+                fontWeight: 600,
                 letterSpacing: ".3rem",
+               
                 color: "inherit",
                 textDecoration: "none",
               }}
@@ -111,7 +104,7 @@ const NavBar = () => {
               >
                 {pages.map((page) => (
                   <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center">{page}</Typography>
+                    <Typography textAlign="center" onClick={() => handleScroll(page)}>{page}</Typography>
                   </MenuItem>
                 ))}
               </Menu>
@@ -123,6 +116,7 @@ const NavBar = () => {
 
             <Box
               component={"img"}
+              onClick={() => handleScroll("Hero")}
               sx={{
                 height: 40,
                 display: { xs: "flex", md: "none" },
@@ -136,7 +130,6 @@ const NavBar = () => {
               variant="h5"
               noWrap
               component="a"
-              href="#app-bar-with-responsive-menu"
               sx={{
                 mr: 2,
                 display: { xs: "flex", md: "none" },
@@ -147,7 +140,8 @@ const NavBar = () => {
                 color: "inherit",
                 textDecoration: "none",
               }}
-                className="font"
+              onClick={() => handleScroll("Hero")}
+              className="font"
             >
               Finn Rea
             </Typography>
@@ -164,7 +158,9 @@ const NavBar = () => {
               {pages.map((page) => (
                 <Button
                   key={page}
-                  onClick={handleCloseNavMenu}
+                  // onClick={() => handleScroll(page)}
+                  onClick={ () => handleScroll(page)}
+                  
                   sx={{
                     my: 1,
                     mx: 0.5,
@@ -179,38 +175,6 @@ const NavBar = () => {
                 </Button>
               ))}
             </Box>
-
-            {/* Display the user settings */}
-
-            {/* <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box> */}
           </Toolbar>
         </Container>
       </AppBar>

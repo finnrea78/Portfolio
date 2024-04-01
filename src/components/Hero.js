@@ -1,20 +1,18 @@
 import React from "react";
-import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
-import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import Finn from "C:/Portfolio/src/images/Me_pier.jpg";
 import { ReactTyped } from "react-typed";
 
 import "../css/Hero.css";
 
-const Hero = () => {
+const Hero = React.forwardRef((props, ref) => {
   return (
     <Box
       component="div"
       sx={{ flexGrow: 1, backgroundColor: "#d3d3d3" }}
     >
-      <Grid container spacing={2}>
+      <Grid container spacing={2} direction={"row"}>
         <Grid
           item
           display={"flex"}
@@ -26,14 +24,14 @@ const Hero = () => {
             pl: 3,
             m: "auto",
           }}
-          direction="column"
+          
           alignItems="center"
           justifyContent="center"
         >
-          <Box className="text" sx={{pl: 1}}>
+          <Box className="text" sx={{pl: 1}} >
             {/* Add on hover general kenobi */}
 
-            <h3 className="easter_egg">
+            <h3 className="easter_egg" ref={ref}>
               {" "}
               <span> Hello there! </span>
             </h3>
@@ -43,9 +41,9 @@ const Hero = () => {
               <u>
                 <b> Finn</b>
               </u>{" "}
-              <u>
+              {/* <u>
                 <b>Rea</b>
-              </u>{" "}
+              </u>{" "} */}
             </h1>
             <div className="inner-container">
               <h2>
@@ -96,6 +94,6 @@ const Hero = () => {
       </Grid>
     </Box>
   );
-};
+});
 
 export default Hero;

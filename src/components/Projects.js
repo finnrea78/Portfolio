@@ -12,6 +12,7 @@ import CoreBodyTemp from "../images/CoreBody.png";
 import Knees from "../images/knees.png";
 import Frog from "../images/Frog.png";
 import "../css/Projects.css";
+import react from "@heroicons/react";
 
 const projects = [
   {
@@ -38,7 +39,7 @@ const projects = [
   },
 ];
 
-const Projects = () => {
+const Projects = React.forwardRef((props, ref) => {
   const titleStyle = {
     fontFamily: "Lucida Console",
     fontSize: "4rem",
@@ -48,7 +49,7 @@ const Projects = () => {
 
   return (
     <Box component="div" className="mainContainer">
-      <Typography variant="h3" component="h1" sx={titleStyle}>
+      <Typography variant="h3" component="h1" sx={titleStyle} ref={ref}>
         Personal favourite projects
     </Typography>
       <Grid container justify="center">
@@ -82,6 +83,6 @@ const Projects = () => {
       </Grid>
     </Box>
   );
-};
+});
 
 export default Projects;

@@ -2,11 +2,15 @@ import React from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-import ContactImg from "../images/Contact.png";
-import { styled } from "@mui/material/styles";
+import IconButton from "@mui/material/IconButton";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import EmailIcon from "@mui/icons-material/Email";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import ListAltIcon from "@mui/icons-material/ListAlt";
+import { Button } from "@mui/material";
 import "../css/Contact.css";
 
-const Contact = () => {
+const Contact = React.forwardRef((props, ref) => {
   const titleStyle = {
     fontFamily: "Lucida Console",
     fontSize: "4rem",
@@ -26,9 +30,24 @@ const Contact = () => {
     justifyContent: "center",
   };
 
+  const links = {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
+    mx: { xs: 10, sm: 15, md: 3, lg: 5, xl: 10 },
+    mt: 1,
+    mb: 2,
+  };
+  const linkItem = {
+    fontSize: { xs: "5em", md: "5em" },
+    "&:hover": {
+      color: "gray",
+    },
+  };
+
   return (
     <Box component="div" className="background" sx={{ flexGrow: 1 }}>
-      <Typography variant="h3" component="h1" sx={titleStyle}>
+      <Typography variant="h3" component="h1" sx={titleStyle} ref={ref}>
         Contact
       </Typography>
       <Grid
@@ -39,22 +58,63 @@ const Contact = () => {
         alignItems="center"
         justifyContent="center"
       >
-          <Grid item xs={12} sm={12} md={4}>
-            <Typography variant="h3" component="h1" sx={subtitleStyle}>
-                Social media links
-            </Typography>
-            
-          </Grid>
-          <Grid item xs={12} sm={12} md={4}>
-            item 2
-          </Grid>
-          <Grid item xs={12} sm={12} md={4}>
-            item 3
-          </Grid>
-        
+        <Grid item xs={12} sm={12} md={4}>
+          <Typography variant="h3" component="h1" sx={subtitleStyle}>
+            Links
+          </Typography>
+          <Box sx={links}>
+            <GitHubIcon sx={linkItem}/>
+            <LinkedInIcon sx={linkItem}/>
+            <EmailIcon sx={linkItem}/>
+          </Box>
+        </Grid>
+        <Grid item xs={12} sm={12} md={4}>
+          <Typography variant="h3" component="h1" sx={subtitleStyle}>
+            Details
+          </Typography>
+          <Typography
+            multiline="true"
+            variant="body1"
+            component="p"
+            sx={{
+              display: "flex",
+              textAlign: { sm: "justify", md: "center", lg: "justify" },
+              alignItems: "center",
+              justifyContent: "center",
+              whiteSpace: "pre-wrap",
+              fontSize: "1.5Rem",
+              mt: 1,
+            }}
+          >
+            Email: finn.t.rea@gmail.com{"\n"}
+            Mobile number: 07701345676
+          </Typography>
+        </Grid>
+        <Grid item xs={12} sm={12} md={4}>
+          <Typography variant="h3" component="h1" sx={subtitleStyle}>
+            CV
+          </Typography>
+          <Box
+            component="div"
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <Button
+              variant="filled"
+              size="large"
+              sx={{ fontSize: "2em", pt: 1 }}
+            >
+              <ListAltIcon sx={{ fontSize: "2em" }} />
+              Download CV
+            </Button>
+          </Box>
+        </Grid>
       </Grid>
     </Box>
   );
-};
+});
 
 export default Contact;
