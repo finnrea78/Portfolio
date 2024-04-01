@@ -8,6 +8,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import ListAltIcon from "@mui/icons-material/ListAlt";
 import { Button } from "@mui/material";
+import FinnCv from "../images/Finn Rea.pdf";
 import "../css/Contact.css";
 
 const Contact = React.forwardRef((props, ref) => {
@@ -42,7 +43,16 @@ const Contact = React.forwardRef((props, ref) => {
     fontSize: { xs: "5em", md: "5em" },
     "&:hover": {
       color: "gray",
+      cursor: "pointer",
     },
+  };
+
+  const onDownload = () => {
+    const link = document.createElement("a");
+    link.download = "FinnCv";
+    link.href = FinnCv;
+    link.target = "_blank";
+    link.click();
   };
 
   return (
@@ -63,9 +73,20 @@ const Contact = React.forwardRef((props, ref) => {
             Links
           </Typography>
           <Box sx={links}>
-            <GitHubIcon sx={linkItem}/>
-            <LinkedInIcon sx={linkItem}/>
-            <EmailIcon sx={linkItem}/>
+            <GitHubIcon
+              sx={linkItem}
+              onClick={(event) => window.open("https://github.com/finnrea78")}
+            />
+            <LinkedInIcon
+              sx={linkItem}
+              onClick={(event) =>
+                window.open("https://www.linkedin.com/in/finn-rea-a336ab205/")
+              }
+            />
+            <EmailIcon
+              sx={linkItem}
+              onClick={(event) => window.open("mailto:finn.t.rea@gmail.com")}
+            />
           </Box>
         </Grid>
         <Grid item xs={12} sm={12} md={4}>
@@ -103,6 +124,7 @@ const Contact = React.forwardRef((props, ref) => {
             }}
           >
             <Button
+              onClick={onDownload}
               variant="filled"
               size="large"
               sx={{ fontSize: "2em", pt: 1 }}

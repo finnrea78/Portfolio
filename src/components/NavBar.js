@@ -47,6 +47,7 @@ const NavBar = ({ handleScroll }) => {
                 display: { xs: "none", md: "flex" },
                 mr: 3,
                 filter: "invert(1)",
+                "&:hover": { cursor: "pointer" },
               }}
               src={Main_logo}
               alt="Main_logo"
@@ -65,6 +66,7 @@ const NavBar = ({ handleScroll }) => {
                
                 color: "inherit",
                 textDecoration: "none",
+                "&:hover": { cursor: "pointer" },
               }}
               className="font"
             >
@@ -122,6 +124,7 @@ const NavBar = ({ handleScroll }) => {
                 display: { xs: "flex", md: "none" },
                 mr: 3,
                 filter: "invert(1)",
+                "&:hover": { cursor: "pointer" },
               }}
               src={Main_logo}
               alt="Main_logo"
@@ -139,6 +142,7 @@ const NavBar = ({ handleScroll }) => {
                 letterSpacing: ".3rem",
                 color: "inherit",
                 textDecoration: "none",
+                "&:hover": { cursor: "pointer" },
               }}
               onClick={() => handleScroll("Hero")}
               className="font"

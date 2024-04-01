@@ -28,7 +28,7 @@ const Hero = React.forwardRef((props, ref) => {
           alignItems="center"
           justifyContent="center"
         >
-          <Box className="text" sx={{pl: 1}} >
+          <Box className="text" sx={{pl: 3, textAlign: {xs: "center", sm: "center", md: "center", lg:"left"}}} >
             {/* Add on hover general kenobi */}
 
             <h3 className="easter_egg" ref={ref}>
@@ -53,7 +53,7 @@ const Hero = React.forwardRef((props, ref) => {
                   strings={[
                     "Data scientist",
                     "Software engineer",
-                    "Open source enthusias",
+                    "Open source enthusiast",
                   ]}
                   typeSpeed={80}
                   backSpeed={30}
