@@ -10,16 +10,15 @@ const About = React.forwardRef((props, ref) => {
   const titleStyle = {
     fontFamily: "Lucida Console",
     fontSize: "4rem",
-    textAlign: "center",
+    ml: {xs: "100%", sm: 0},
     justifyContent: "center",
     display: "flex",
     boxSizing: "border-box",
   };
 
   return (
-    
-    <Grid container spacing={2} className="background" sx={{ pb: 3 }} >
-      <Grid item sm={12} sx={{ my: 2, py: 1, ml: { xs: 25, sm: 0 } }}>
+    <Grid container spacing={2} className="background" sx={{ pb: 3 }}>
+      <Grid item sm={12} sx={{ my: 2, py: 1}}>
         <Typography variant="h3" component="h1" sx={titleStyle} ref={ref}>
           About
         </Typography>
@@ -32,18 +31,21 @@ const About = React.forwardRef((props, ref) => {
         md={6}
         lg={6}
         display={"flex"}
-        alignItems="center"
-        justifyContent="center"
+        alignItems="flex-end"
+        justifyContent="flex-end"
       >
         <Box
           component={"img"}
           src={HealthTech}
+          display="flex"
+          justifyContent="flex-end"
+          
           sx={{
-            p: { sm: 2 },
-            mx: { sm: 5 },
-            display: "flex",
-            maxHeight: { md: "100%" },
-            maxWidth: { md: "100%" },
+            m: "auto",
+            mb: 3,
+            p: 3,
+            maxHeight: { xs: "100%", md: "100%" },
+            maxWidth: { xs: "100%", md: "100%" },
           }}
           className="content"
         />
@@ -69,8 +71,8 @@ const About = React.forwardRef((props, ref) => {
               }}
             >
               Hi there! I'm Finn, currently a data scientist at roche with a
-              intrested in the cross section between technology and
-              healthcare. Trying to bring the benifits of tech into health. I'm always
+              intrested in the cross section between technology and healthcare.
+              Trying to bring the benifits of tech into health. I'm always
               looking for new challenges and opportunities to learn and grow.
               Feel free to reach out to me if you have any questions or just
               want to chat! {"\n\n"}I graduated with a Bachelors in computer
