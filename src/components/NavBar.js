@@ -9,10 +9,9 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import Main_logo from "C:/Portfolio/src/images/Logo.png";
+import Main_logo from "../images/Logo.png";
 import CssBaseline from "@mui/material/CssBaseline";
-import { Link } from "react-scroll";
-import { useState } from "react";
+
 
 import "../css/NavBar.css";
 
