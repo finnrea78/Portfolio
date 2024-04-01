@@ -12,7 +12,6 @@ import CoreBodyTemp from "../images/CoreBody.png";
 import Knees from "../images/knees.png";
 import Frog from "../images/Frog.png";
 import "../css/Projects.css";
-import react from "@heroicons/react";
 
 const projects = [
   {
