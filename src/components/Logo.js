@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-import Main_logo from 'C:/Portfolio/src/images/Logo.png';
+import Main_logo from '../images/Logo.png';
 import '../css/Logo.css';
 
 const center = {
