@@ -1,7 +1,7 @@
 import React from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-import Finn from "C:/Portfolio/src/images/Me_pier.jpg";
+import Finn from "../images/Me_pier.jpg";
 import { ReactTyped } from "react-typed";
 
 import "../css/Hero.css";
