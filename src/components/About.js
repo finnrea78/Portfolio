@@ -68,14 +68,14 @@ const About = React.forwardRef((props, ref) => {
                 mr: 1,
               }}
             >
-              Hi there! I'm Finn. I am currently a data scientist at roche. I am
-              particularly intrested in the cross section between technology and
-              healthcare, bring the benifits of tech into health. I'm always
+              Hi there! I'm Finn, currently a data scientist at roche with a
+              intrested in the cross section between technology and
+              healthcare. Trying to bring the benifits of tech into health. I'm always
               looking for new challenges and opportunities to learn and grow.
               Feel free to reach out to me if you have any questions or just
-              want to chat! {"\n\n"}I graduate with a bachelors in computer
-              science from Newcastle University in 2023. I am currently pursuing
-              a masters in data science at Exeter University. Outside of work I
+              want to chat! {"\n\n"}I graduated with a Bachelors in computer
+              science from Newcastle University in 2023. Currently I am pursuing
+              a Msc in data science at Exeter University. Outside of work I
               enjoy playing the guitar having played in multiple bands, playing
               frisbee (Newcastle pies) and BJJ.
             </Typography>
