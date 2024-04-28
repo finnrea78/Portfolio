@@ -98,7 +98,7 @@ const Contact = React.forwardRef((props, ref) => {
             component="p"
             sx={{
               display: "flex",
-              textAlign: { sm: "justify", md: "center", lg: "justify" },
+              textAlign: { xs: "center", sm: "justify", md: "center", lg: "justify" },
               alignItems: "center",
               justifyContent: "center",
               whiteSpace: "pre-wrap",
