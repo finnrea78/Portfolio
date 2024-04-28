@@ -34,7 +34,7 @@ const Contact = React.forwardRef((props, ref) => {
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
-    mx: { xs: 10, sm: 15, md: 3, lg: 5, xl: 10 },
+    // mx: { xs: 10, sm: 15, md: 3, lg: 5, xl: 10 },
     mt: 1,
     mb: 2,
   };
@@ -67,7 +67,7 @@ const Contact = React.forwardRef((props, ref) => {
         alignItems="center"
         justifyContent="center"
       >
-        <Grid item xs={12} sm={12} md={4}>
+        <Grid item xs={12} sm={12} md={4} sx={{mx:{xs: 4, sm: 20, md: 0}}}>
           <Typography variant="h3" component="h1" sx={subtitleStyle}>
             Links
           </Typography>
