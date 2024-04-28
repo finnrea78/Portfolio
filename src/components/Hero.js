@@ -52,8 +52,8 @@ const Hero = React.forwardRef((props, ref) => {
                 <ReactTyped
                   strings={[
                     "Data scientist",
-                    "Software engineer",
-                    "Open source enthusiast",
+                    "Software Dev",
+                    "ML Engineer",
                   ]}
                   typeSpeed={80}
                   backSpeed={30}
